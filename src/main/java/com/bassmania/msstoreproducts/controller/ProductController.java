@@ -33,7 +33,7 @@ public class ProductController {
                             description = "Lista de productos",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = List.class)
+                                    schema = @Schema(implementation = Product.class)
                             )
                     ),
                     @ApiResponse(
