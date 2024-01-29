@@ -51,11 +51,11 @@ public class ProductRepository {
         }
 
         if (StringUtils.isNotBlank(description)) {
-            spec.add(new SearchStatement("description", model, SearchOperation.MATCH));
+            spec.add(new SearchStatement("description", description, SearchOperation.MATCH));
         }
 
         if (price != null) {
-            spec.add(new SearchStatement("price", price, SearchOperation.MATCH));
+            spec.add(new SearchStatement("price", price, SearchOperation.EQUAL));
         }
 
         return productJpaRepository.findAll(spec);
